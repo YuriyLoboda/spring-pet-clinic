@@ -3,7 +3,7 @@ package yulo.springframework.model;
 /**
  * Created by yulo0717 on 10/24/2018.
  */
-public class PetType {
+public class PetType extends BaseEntity {
     private String name;
 
     public String getName() {
