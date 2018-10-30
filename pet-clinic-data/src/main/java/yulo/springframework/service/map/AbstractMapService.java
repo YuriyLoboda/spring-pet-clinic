@@ -1,5 +1,7 @@
 package yulo.springframework.service.map;
 
+import org.springframework.data.repository.CrudRepository;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -8,7 +10,7 @@ import java.util.Set;
 /**
  * Created by yulo0717 on 10/29/2018.
  */
-public abstract class AbstractMapService<T, ID> {
+public abstract class AbstractMapService<T, ID>{
     private Map<ID, T> mapStracture = new HashMap<>();
 
     public Set<T> findAll() {
