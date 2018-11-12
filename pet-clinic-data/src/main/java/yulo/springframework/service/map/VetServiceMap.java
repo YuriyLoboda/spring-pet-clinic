@@ -2,13 +2,14 @@ package yulo.springframework.service.map;
 
 import yulo.springframework.model.Vet;
 import yulo.springframework.service.CrudService;
+import yulo.springframework.service.VetService;
 
 import java.util.Set;
 
 /**
  * Created by yulo0717 on 10/29/2018.
  */
-public class VetServiceMap extends AbstractMapService<Vet,Long> implements CrudService<Vet,Long> {
+public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetService {
     @Override
     public Vet findById(Long id) {
         return super.findByID(id) ;

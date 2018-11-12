@@ -2,13 +2,14 @@ package yulo.springframework.service.map;
 
 import yulo.springframework.model.Owner;
 import yulo.springframework.service.CrudService;
+import yulo.springframework.service.OwnerService;
 
 import java.util.Set;
 
 /**
  * Created by yulo0717 on 10/29/2018.
  */
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
     @Override
     public Owner findById(Long id) {
         return super.findByID(id);
@@ -32,5 +33,10 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
     @Override
     public Set<Owner> findAll() {
         return super.findAll();
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
     }
 }
