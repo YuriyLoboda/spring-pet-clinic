@@ -1,5 +1,6 @@
 package yulo.springframework.service.map;
 
+import org.springframework.stereotype.Service;
 import yulo.springframework.model.Owner;
 import yulo.springframework.service.CrudService;
 import yulo.springframework.service.OwnerService;
@@ -9,6 +10,7 @@ import java.util.Set;
 /**
  * Created by yulo0717 on 10/29/2018.
  */
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
     @Override
     public Owner findById(Long id) {
@@ -17,7 +19,7 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 
     @Override
     public Owner save(Owner instance) {
-        return super.save(instance.getId(), instance);
+        return super.save(instance);
     }
 
     @Override

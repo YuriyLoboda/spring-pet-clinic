@@ -1,5 +1,6 @@
 package yulo.springframework.service.map;
 
+import org.springframework.stereotype.Service;
 import yulo.springframework.model.Pet;
 import yulo.springframework.service.CrudService;
 import yulo.springframework.service.PetService;
@@ -9,6 +10,7 @@ import java.util.Set;
 /**
  * Created by yulo0717 on 10/29/2018.
  */
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
@@ -18,7 +20,7 @@ public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetS
 
     @Override
     public Pet save(Pet instance) {
-        return super.save(instance.getId(), instance);
+        return super.save(instance);
     }
 
     @Override
